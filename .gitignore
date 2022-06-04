@@ -18,3 +18,7 @@ revdep/checks.noindex
 revdep/library.noindex
 revdep/data.sqlite
 revdep/cloud.noindex
+
+*/src/*.o
+*/src/*.so
+*/src/*.dll
