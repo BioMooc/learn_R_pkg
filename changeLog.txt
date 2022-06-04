@@ -1,2 +1,2 @@
 v0.0.1 pkgS1 the basic R package build process
-
+v0.0.2 pkgS2 How to use other R pkgs in your pkg? Depends or Imports in DESCRIPTION
