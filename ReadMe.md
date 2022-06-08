@@ -102,6 +102,47 @@ $ R CMD SHLIB src/helloC1.c
 
 
 
+## pkgS5 How to use C/C++ in my R pkg? Rcpp pkg.
+```
+Step1: put this in a R/xx.R file, to load the compiled .so file
+#' @useDynLib pkgS5
+#' @import Rcpp
+#'
+NULL
+
+Step2: put the Rcpp pkg you use in DESCRIPTION file, like
+LinkingTo: Rcpp (>= 0.11.0), RcppArmadillo, RcppEigen
+
+Step3: write your C++ file in src/xx.cpp
+#include <Rcpp.h>
+using namespace Rcpp;
+
+//' @export
+// [[Rcpp::export]]
+NumericVector timesTwo(NumericVector x) {
+  return x * 2;
+}
+
+
+(optional) put `//' @export` before your C++ function to expose it outside this R pkg
+
+Step4: test
+> devtools::document()
+> unlink("NAMESPACE")
+> devtools::document()
+> devtools::load_all()
+> timesTwo(3:5)
+[1]  6  8 10
+
+Step5: build and test
+> devtools::build()
+> install.packages("~/data/project/learn_R_pkg/pkgS6_0.1.0.tar.gz", repos = NULL, type = "source")
+Restart R session: shift+ctrl+F10
+> library(pkgS6)
+> timesTwo(1:3)
+[1] 2 4 6
+```
+
 
 
 
