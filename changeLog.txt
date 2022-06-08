@@ -2,4 +2,4 @@ v0.0.1 pkgS1 the basic R package build process
 v0.0.2 pkgS2 How to use other R pkgs in your pkg? Depends or Imports in DESCRIPTION
 v0.0.3 pkgS3 How to call C functions in R? .C()
 v0.0.4 pkgS4 How to use C/C++ in my R pkg? .Call()
-
+v0.0.5 pkgS4 fix

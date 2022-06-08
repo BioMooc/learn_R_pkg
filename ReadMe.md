@@ -24,6 +24,22 @@
 
 # Examples
 
+```
+On Ubuntu 20.04
+
+$ which R
+/usr/local/bin/R
+$ ls -lth /usr/local/bin/R
+lrwxrwxrwx 1 root root 26 Sep  3  2021 /usr/local/bin/R -> /data/public/R-4.1.1/bin/R
+
+devtools 2.4.2
+roxygen2 7.1.2
+Rcpp 1.0.7
+
+ggplot2 3.3.5
+ggrepel 0.9.1
+```
+
 ## pkgS1 The basic R package building process
 
 ## pkgS2 How to depend on functions in other pkgs?
@@ -50,7 +66,7 @@ void useC(int *i) {
 }
 $ R CMD SHLIB C_funcs.c
 
-> dyn.load("useC1.so")
+> dyn.load("C_funcs.so")
 > a <- 1:10
 > out <- .C("useC", b = as.integer(a)) #第一个参数是C函数名，接着是其他R参数
 > out$b
@@ -64,6 +80,7 @@ use #' @useDynLib pkgS3 on one function comment.
 ## pkgS4 How to use C/C++ in my R pkg? .Call() 
 
 ```
+$ vim src/helloC1.c
 #include <R.h>
 #include <Rdefines.h>
 #include <string.h>
