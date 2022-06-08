@@ -4,3 +4,4 @@ v0.0.3 pkgS3 How to call C functions in R? .C()
 v0.0.4 pkgS4 How to use C/C++ in my R pkg? .Call()
 v0.0.5 pkgS4 fix
 v0.0.6 pkgS5/ How to use C/C++ in my R pkg? Rcpp pkg
+v0.0.7 update docs

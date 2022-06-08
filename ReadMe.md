@@ -1,18 +1,39 @@
 # Learn how to build R packages
 
-## I
-
-- https://cran.r-project.org/doc/manuals/R-exts.html
-
-
-
-## II
-
-- https://r-pkgs.org/
-- https://github.com/hadley/r-pkgs
 - Local: Y station:/home/wangjl/data/project/learn_R_pkg
 - github: https://github.com/BioMooc/learn_R_pkg
 
+
+
+## About R pkg 
+
+- https://cran.r-project.org/doc/manuals/R-exts.html
+
+- https://r-pkgs.org/
+- https://github.com/hadley/r-pkgs
+- https://r-pkgs.org/src.html
+
+
+## About Rcpp
+
+- https://dirk.eddelbuettel.com/code/rcpp.html
+- http://www.rcpp.org/
+- http://gallery.rcpp.org
+
+
+- http://adv-r.had.co.nz/Rcpp.html
+- https://adv-r.hadley.nz/rcpp.html
+
+
+About Matrix
+
+- https://github.com/RcppCore/RcppEigen
+- https://github.com/RcppCore/RcppArmadillo
+
+About C++
+
+- Effective C++, More Effective C++ and Effective STL.
+- https://teuder.github.io/rcpp4everyone_en/
 
 
 
